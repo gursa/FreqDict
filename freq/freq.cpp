@@ -37,10 +37,6 @@ void TFreq::ReadData(std::istream& inputStream) {
         dictionary[keyName]++;
     }
 
-    if (dictionary.empty()) {
-        std::logic_error("Dictionary is empty!");
-    }
-
     Data.reserve(dictionary.size());
 
     for (auto& [textWord, count] : dictionary) {
