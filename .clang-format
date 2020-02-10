@@ -4,7 +4,7 @@ AlignAfterOpenBracket: AlwaysBreak
 BreakBeforeBraces: Custom
 BraceWrapping:
   #AfterCaseLabel: false - работает начиная с clang-format-9
-  AfterClass: true
+  AfterClass: false
   #BraceWrappingAfterControlStatementStyle: MultiLine - работает начиная с clang-format-11
   AfterEnum: false
   AfterFunction: false

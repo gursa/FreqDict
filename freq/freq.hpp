@@ -5,21 +5,18 @@
 #include <vector>
 
 
-class TFreq
-{
+class TFreq {
     using TFileIterator = std::istreambuf_iterator<char>;
     using TDataPair = std::pair<size_t, std::string>;
 
 public:
-    explicit TFreq(const std::string& input);
-    explicit TFreq(std::istream& input);
+    explicit TFreq(const std::string& inputFilename);
+    explicit TFreq(std::istream& inputStream);
     void Analyze();
-    void SaveData(const std::string& output);
+    void SaveData(const std::string& outputFilename);
 
     TFreq(const TFreq&) = delete;
     const TFreq& operator=(const TFreq&) = delete;
-    TFreq(TFreq&&) = delete;
-    TFreq& operator=(TFreq&&) = delete;
 
 private:
     void ReadData(std::istream& input);
